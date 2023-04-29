@@ -1,0 +1,3 @@
+/home/virgil/CLionProjects/dijkstra/cmake-build-debug/CMakeFiles/dijkstra.dir
+/home/virgil/CLionProjects/dijkstra/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/virgil/CLionProjects/dijkstra/cmake-build-debug/CMakeFiles/rebuild_cache.dir
