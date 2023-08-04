@@ -4,14 +4,14 @@
 		"generator" : 
 		{
 			"multiConfig" : false,
-			"name" : "Ninja"
+			"name" : "Unix Makefiles"
 		},
 		"paths" : 
 		{
-			"cmake" : "/home/virgil/Documents/clion/CLion-2023.1.2/clion-2023.1.2/bin/cmake/linux/x64/bin/cmake",
-			"cpack" : "/home/virgil/Documents/clion/CLion-2023.1.2/clion-2023.1.2/bin/cmake/linux/x64/bin/cpack",
-			"ctest" : "/home/virgil/Documents/clion/CLion-2023.1.2/clion-2023.1.2/bin/cmake/linux/x64/bin/ctest",
-			"root" : "/home/virgil/Documents/clion/CLion-2023.1.2/clion-2023.1.2/bin/cmake/linux/x64/share/cmake-3.25"
+			"cmake" : "/home/virgil/Downloads/CLion-2023.1.4/clion-2023.1.4/bin/cmake/linux/x64/bin/cmake",
+			"cpack" : "/home/virgil/Downloads/CLion-2023.1.4/clion-2023.1.4/bin/cmake/linux/x64/bin/cpack",
+			"ctest" : "/home/virgil/Downloads/CLion-2023.1.4/clion-2023.1.4/bin/cmake/linux/x64/bin/ctest",
+			"root" : "/home/virgil/Downloads/CLion-2023.1.4/clion-2023.1.4/bin/cmake/linux/x64/share/cmake-3.25"
 		},
 		"version" : 
 		{
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-9815d557129a0ec7597b.json",
+			"jsonFile" : "cache-v2-d530866d21fc64658890.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-5888f521aabb4dba54d0.json",
+			"jsonFile" : "cmakeFiles-v1-20940b1f6a1dfd27bf22.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -66,7 +66,7 @@
 	{
 		"cache-v2" : 
 		{
-			"jsonFile" : "cache-v2-9815d557129a0ec7597b.json",
+			"jsonFile" : "cache-v2-d530866d21fc64658890.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -76,7 +76,7 @@
 		},
 		"cmakeFiles-v1" : 
 		{
-			"jsonFile" : "cmakeFiles-v1-5888f521aabb4dba54d0.json",
+			"jsonFile" : "cmakeFiles-v1-20940b1f6a1dfd27bf22.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{

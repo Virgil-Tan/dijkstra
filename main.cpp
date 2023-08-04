@@ -1,9 +1,11 @@
 #include <iostream>
+#include <fstream>
 #include <vector>
+#include <string>
+#include <sstream>
 #include <queue>
 #include <limits>
-#include <fstream>
-#include <time.h>
+#include <ctime>
 
 using namespace std;
 
@@ -43,31 +45,38 @@ void dijkstra(int start) {
 }
 
 int main() {
-    //get map from txt file
-    ifstream infile("/home/virgil/Documents/data/USA-road-d.FLA.gr");
-//    ifstream infile("/home/virgil/CLionProjects/bellmanFord/mapDataTest.txt");
-    if (!infile) {
-        cerr << "Cannot open file: mapDataTest.txt" << endl;
+    ifstream file("/home/virgil/Downloads/USA-road-d.NY.gr");
+//    ifstream file("/home/virgil/CLionProjects/dijkstra/mapDataTest2.txt");
+    if (!file) {
+        cerr << "Cannot open file." << endl;
         return 1;
     }
 
+    string line;
     int num_nodes, num_edges;
-    infile >> num_nodes >> num_edges;
-    num_nodes++;
-    graph.resize(num_nodes);
-    dist.resize(num_nodes, numeric_limits<int>::max());
-    printf("notd num: %d, edges: %d", num_nodes, num_edges);
-    for (int i = 0; i < num_edges; ++i) {
-        Edge edge;
-        char skip_word;
-        infile >> skip_word  >> edge.src >> edge.dest >> edge.weight;
-        graph[edge.src].push_back(edge);
-    }
-    infile.close();
 
-    // Run Dijkstra's algorithm with a random starting node
+    while (getline(file, line)) {
+        istringstream iss(line);
+        char identifier;
+        iss >> identifier;
+
+        if (identifier == 'p') {
+            string temp;
+            iss >> temp >> num_nodes >> num_edges;
+            num_nodes++;
+            graph.resize(num_nodes);
+            dist.resize(num_nodes, numeric_limits<int>::max());
+        } else if (identifier == 'a') {
+            Edge edge;
+            iss >> edge.src >> edge.dest >> edge.weight;
+            graph[edge.src].push_back(edge);
+        }
+    }
+
+    file.close();
+
     int start_node = 1;
-    cout << "running dijkstra's algorithm with starting node " << start_node << endl;
+    cout << "Running Dijkstra's algorithm with starting node " << start_node << "\n";
 
     clock_t start, stop;
     double duration;
@@ -78,19 +87,19 @@ int main() {
     stop = clock();
     duration = ((double)(stop - start)) / CLOCKS_PER_SEC;
 
-    cout << duration << endl;
 
-    // print the shortest path distances
-    cout << "finished" << endl;
-//    for (int i = 0; i < num_nodes; ++i) {
-//        cout << "node " << i << ": ";
-//        if (dist[i] == numeric_limits<int>::max()) {
-//            cout << "infinity" << endl;
-//        }
-//        else {
-//            cout << dist[i] << endl;
-//        }
-//    }
+    cout << "Finished\n";
+
+    for (int i = 0; i < num_nodes; ++i) {
+        cout << "Shortest path from node " << start_node << " to node " << i << ": ";
+        if (dist[i] == numeric_limits<int>::max()) {
+            cout << "infinity" << endl;
+        }
+        else {
+            cout << dist[i] << endl;
+        }
+    }
+    cout << "Time: " << duration << " seconds.\n";
 
     return 0;
 }
